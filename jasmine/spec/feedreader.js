@@ -73,6 +73,10 @@ $(function() {
           * clicked and does it hide when clicked again.
           */
 
+        it ('changes visibility when menu is clicked', function() {
+
+        });
+
     });
     /* TODO: Write a new test suite named "Initial Entries" */
     describe('Initial Entries', function() {
