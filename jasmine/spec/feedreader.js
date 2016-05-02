@@ -94,6 +94,19 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+
+        var feedList = $('#feed-list');
+
+        beforeEach(function(done) {
+            loadFeed(0, function() {
+                done();
+            });
+        });
+
+        it('has at least a single entry', function(done) {
+            expect(feedList.children()).toBeGreaterThan(0);
+        });
+
     });
 
     describe('New Feed Selection', function() {
