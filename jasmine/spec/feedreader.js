@@ -95,7 +95,7 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
-        var feedList = $('#feed-list');
+        var feedList = $('#feed');
 
         beforeEach(function(done) {
             loadFeed(0, function() {
@@ -104,7 +104,8 @@ $(function() {
         });
 
         it('has at least a single entry', function(done) {
-            expect(feedList.children()).toBeGreaterThan(0);
+            expect(feedList.children().length).toBeGreaterThan(0);
+            done();
         });
 
     });
