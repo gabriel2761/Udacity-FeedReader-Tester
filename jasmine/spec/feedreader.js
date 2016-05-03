@@ -85,14 +85,11 @@ $(function() {
         var feedList = $('#feed');
 
         beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
+            loadFeed(0, done());
         });
 
-        it('has at least a single entry', function(done) {
+        it('has at least a single entry', function() {
             expect(feedList.children().length).toBeGreaterThan(0);
-            done();
         });
 
     });
@@ -105,23 +102,20 @@ $(function() {
         var feeds = $('#feed');
 
         beforeEach(function(done) {
-            loadFeed(0, function() {
-                done();
-            });
+            loadFeed(0, done());
         });
 
         /**
          * Loops over each item and checks to see if the
          * "href" attribute and "h2" tag has strings inside.
          */
-        it('Content changes in new feed', function(done) {
+        it('Content changes in new feed', function() {
             feeds.children().each(function(index, value) {
                 expect($(this).attr('href')).toBeDefined();
                 expect($(this).attr('href').length).not.toBe(0);
                 expect($(this).find('h2').text()).toBeDefined();
                 expect($(this).find('h2').text().length).not.toBe(0);
             });
-            done();
         });
 
     });
