@@ -117,5 +117,24 @@ $(function() {
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+
+        var feeds = $('#feed');
+
+        beforeEach(function(done) {
+            loadFeed(0, function() {
+                done();
+            });
+        });
+
+        it('Content changes in new feed', function(done) {
+            feeds.children().each(function(index, value) {
+                expect($(this).attr('href')).toBeDefined();
+                expect($(this).attr('href').length).not.toBe(0);
+                expect($(this).find('h2').text()).toBeDefined();
+                expect($(this).find('h2').text().length).not.toBe(0);
+            });
+            done();
+        });
+
     });
 }());
