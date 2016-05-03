@@ -11,13 +11,13 @@
 $(function() {
 
     /**
-     * Checks to see if the variables in the RSS
+     * Checks if the variables in the RSS
      * feeds are correctly defined
      */
     describe('RSS Feeds', function() {
 
         /**
-         * Checks to see if all variables in
+         * Checks if all variables in
          * the feed categories are defined
          */
         it('are defined', function() {
@@ -26,7 +26,7 @@ $(function() {
         });
 
         /**
-         * Checks to see if all the feed
+         * Checks if all the feed
          * categories have an url defined
          */
         it('contains URL', function() {
@@ -37,7 +37,7 @@ $(function() {
         });
 
         /**
-         * Checks to see if all the feed
+         * Checks if all the feed
          * categories have a name defined
          */
         it('has name', function() {
@@ -57,7 +57,7 @@ $(function() {
             menuHamburger = $('#menu-hamburger');
 
         /**
-         * Checks to see if the menu is hidden by default
+         * Checks the menu is hidden by default
          */
         it ('has hidden menu by default', function() {
             expect(body.hasClass('menu-hidden')).toBe(true);
@@ -77,7 +77,7 @@ $(function() {
     });
 
     /**
-     * Checks to see if the list had items inside on when loading data
+     * Checks the list had items inside on when loading data
      * by checking if the list has child elements after loading
      */
     describe('Initial Entries', function() {
@@ -98,7 +98,7 @@ $(function() {
     });
 
     /**
-     * Checks to see if the content is loaded on each list item
+     * Checks if the content is loaded on each list item
      */
     describe('New Feed Selection', function() {
 
