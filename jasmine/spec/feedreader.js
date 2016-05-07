@@ -82,14 +82,12 @@ $(function() {
      */
     describe('Initial Entries', function() {
 
-        var feedList = $('#feed');
-
         beforeEach(function(done) {
-            loadFeed(0, done());
+            loadFeed(0, done);
         });
 
         it('has at least a single entry', function() {
-            expect(feedList.children().length).toBeGreaterThan(0);
+            expect($('.feed .entry').children().length).toBeGreaterThan(0);
         });
 
     });
@@ -102,7 +100,7 @@ $(function() {
         var feeds = $('#feed');
 
         beforeEach(function(done) {
-            loadFeed(0, done());
+            loadFeed(0, done);
         });
 
         /**
